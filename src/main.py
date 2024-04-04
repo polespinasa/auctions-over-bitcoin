@@ -53,11 +53,14 @@ def main():
 
 
     # Create the locking script output
+    # Multisig with all buyers and sellers
     locking_script = Script([
+        '4',
         buyer1.address.to_x_only_hex(),
         buyer2.address.to_x_only_hex(),
         buyer3.address.to_x_only_hex(),
         seller.address.to_x_only_hex(),
+        '4',
         "OP_CHECKMULTISIG"
     ])
 
