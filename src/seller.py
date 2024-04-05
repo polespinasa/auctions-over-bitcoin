@@ -2,15 +2,15 @@ from bitcoinutils.setup import setup
 from bitcoinutils.hdwallet import HDWallet
 
 
-class seller:
+class Seller:
     def __init__(self, mnemonic, basepath = "m/86'/1'/0'/0/0"):
         
         self.id = 0
         self.basepath = basepath
-        self.address, self.pubkey, self.privkey = __generateAddress(mnemonic, basepath)
+        self.address, self.pubkey, self.privkey = self.__generateAddress(mnemonic, basepath)
 
 
-    def __generateAddress(mnemonic, basepath):
+    def __generateAddress(self, mnemonic, basepath):
         setup("testnet")
         hdw_from_mnemonic = HDWallet(mnemonic=mnemonic)
         hdw_from_mnemonic.from_path(basepath)

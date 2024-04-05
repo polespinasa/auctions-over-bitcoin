@@ -2,7 +2,7 @@ from bitcoinutils.setup import setup
 from bitcoinutils.hdwallet import HDWallet
 
 
-class buyer:
+class Buyer:
     def __init__(self, id, mnemonic, basepath = "m/86'/1'/"):
 
         # id 0 is reserved for the seller
